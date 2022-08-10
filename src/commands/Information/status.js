@@ -34,6 +34,7 @@ module.exports = {
 **= SYSTEM =**
 **• Platfrom** : ${os.type}
 **• Uptime** : ${duration1}
+**• GPU** : GTX 3090 TI
 **• CPU** :
 > **• Cores** : ${cpu.cores}
 > **• Model** : ${os.cpus()[0].model} 

@@ -32,6 +32,9 @@ module.exports = class Logger {
 		case "Nuke": {
 			return console.log(`[${chalk.gray(date)}]: [${chalk.black.bgRed(type.toUpperCase())}] ${content}`);
 		} 
+		case "Developer": {
+			return console.log(`[${chalk.gray(date)}]: [${chalk.black.bgGreenBright(type.toUpperCase())}] ${content}`);
+		} 
 		default: throw new TypeError("Logger type must be either warn, debug, log, ready, cmd or error.");
 		}
 	}

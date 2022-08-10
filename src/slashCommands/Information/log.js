@@ -3,11 +3,10 @@ const { EmbedBuilder, CommandInteraction, Client, ApplicationCommandOptionType }
 module.exports = {
     name: "log",
     description: "logs a message",
-    owner: true,
     options: [
         {
-            name: "Message",
-            description: "Message",
+            name: "input",
+            description: "input",
             required: true,
             type: ApplicationCommandOptionType.String
         }
@@ -20,6 +19,6 @@ module.exports = {
 
     run: async (client, interaction) => {
        
-        client.logger.error(interaction.options.data.map(juangay => juangay.value))
+        client.logger.log(interaction.options.data.map(juangay => juangay.value), "log")
     }
 }
